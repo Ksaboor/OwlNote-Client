@@ -1,14 +1,19 @@
 {
-  "name": "ion-electron",
+  "name": "Journal-Front_End",
+  "email": "khalilsaboor1@gmail.com",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "http://ionicframework.com/",
   "private": true,
   "scripts": {
-    "start": "ionic-app-scripts serve",
+    "dev": "nf start",
+    "start":"ionic-app-scripts serve",
+    "electron dist": "electron .",
+    "ebuild":"npm run build && node_modules/.bin/build",
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
-    "lint": "ionic-app-scripts lint"
+    "ionic:build": "ionic-app-scripts build",
+    "ionic:serve": "ionic-app-scripts serve"
   },
   "dependencies": {
     "@angular/animations": "5.2.11",
@@ -32,7 +37,24 @@
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.1.11",
+    "electron": "^2.0.5",
+    "electron-builder": "^20.22.0",
+    "foreman": "^3.0.1",
     "typescript": "~2.6.2"
   },
-  "description": "An Ionic project"
+  "build": {
+    "appId": "com.lohanitech.ionic-electron-test",
+    "electronVersion": "1.7.5",
+    "asar": false,
+    "files": [
+      "www/**/*",
+      "electron/*"
+    ]
+  },
+  "description": "ionic framework based electron project",
+  "main": "electron/electron.js",
+  "config": {
+    "ionic_bundler": "webpack",
+    "ionic_webpack": "./config/webpack.config.js"
+  }
 }
