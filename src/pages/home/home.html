@@ -9,11 +9,15 @@
   <br>
   <div class="well well-lg">
   <p id="questions-placeholder">
-    Where were you five years ago?<br>
-    …Where do you think you’ll be in five years?
+    <!-- Where were you five years ago?<br>
+    …Where do you think you’ll be in five years? -->
+
+    {{currentQuestion}}
   </p>
-  <textarea id="input"></textarea>
+  <form (ngSubmit)="postResponse()">
+  <textarea name="response" [(ngModel)]="response.response"></textarea>
   <br>
-  <button id="Submit" ion-button round (click)="btnClicked()">Submit</button>
+  <button ion-button round type="submit">Submit</button>
+  </form>
   </div>
 </ion-content>
