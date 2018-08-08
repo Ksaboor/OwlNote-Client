@@ -14,7 +14,7 @@
 
     {{currentQuestion}}
   </p>
-  <form (ngSubmit)="postResponse()">
+  <form (ngSubmit)="submit()">
   <textarea name="response" [(ngModel)]="response.response"></textarea>
   <br>
   <button ion-button round type="submit">Submit</button>
