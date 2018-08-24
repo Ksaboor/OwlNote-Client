@@ -22,8 +22,7 @@ postResponse(){
    this.http.post('http://localhost:8080/journalResponse/responses', this.response).subscribe(
 		 response => {
 			 console.log(response);
-		console.log(this.currentQuestionIdx);
-		this.currentQuestion = this.questions[this.currentQuestionIdx].question;
+	//this.currentQuestion = this.questions[this.currentQuestionIdx].question;
 		 }
 	 )
 }
