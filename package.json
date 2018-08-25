@@ -7,9 +7,9 @@
   "private": true,
   "scripts": {
     "dev": "nf start",
-    "start":"ionic-app-scripts serve",
+    "start": "ionic-app-scripts serve",
     "electron dist": "electron .",
-    "ebuild":"npm run build && node_modules/.bin/build",
+    "ebuild": "npm run build && node_modules/.bin/build",
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
     "ionic:build": "ionic-app-scripts build",
